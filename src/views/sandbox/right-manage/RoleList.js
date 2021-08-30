@@ -6,15 +6,27 @@
 import React, { useState, useEffect } from "react";
 
 export default function RoleList() {
-  const [loading,setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  let [number, setNumber] = useState(0);
   useEffect(() => {
-      console.info("-----")
+    console.info("-----");
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  },[loading]);
-  return <>{loading ? <p>Loading...</p> : <p>异步请求完成</p>}</>;
+  }, [loading]);
+
+  function alertNumber() {
+    setTimeout(() => {
+      alert(number);
+    }, 3000);
+  }
+
+  return (
+    <>
+      {loading ? <p>Loading...</p> : <p>异步请求完成</p>}
+      <p>{number}</p>
+      <button onClick={() => setNumber(number + 1)}>+</button>
+      <button onClick={alertNumber}>alertNumber</button>
+    </>
+  );
 }
-
-
-
