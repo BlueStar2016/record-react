@@ -18,7 +18,7 @@ export default function RightList() {
   const double = useMemo(()=>{
     console.log('double')
     return count * 2
-},[count === 2])//关注点
+},[count])//关注点
 
   return (
     <>
