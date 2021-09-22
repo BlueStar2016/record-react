@@ -25,3 +25,12 @@
 .welcome-text{
   padding-right: 10px;
 }
+.flex{
+  display: flex;
+}
+.p_list{
+  margin-left: 20px;
+}
+.p_list p{
+  cursor: pointer;
+}

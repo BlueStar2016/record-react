@@ -8,9 +8,10 @@ function IndexRouter() {
         <HashRouter>
             <Switch>
                 <Route path="/login" component={Login}/>
-                <Route path="/" render={()=>
+                <Route path="/" component={NewsSandBox}/>
+                {/* <Route path="/" render={()=>
                     localStorage.getItem("token")?<NewsSandBox />:<Redirect to="/login"/>
-                    }/>
+                    }/> */}
             </Switch>
         </HashRouter>
     )

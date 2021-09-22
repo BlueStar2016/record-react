@@ -9,11 +9,11 @@ export default function CompA() {
     //   inputEl.current.focus();
     console.info(inputRef.current.value);
   }
-  useImperativeHandle(ref, () => ({
-    focus: () => {
-      inputRef.current.focus();
-    }
-  }));
+  // useImperativeHandle(ref, () => ({
+  //   focus: () => {
+  //     inputRef.current.focus();
+  //   }
+  // }));
 
   return <>
     <p>我是组件A，拿到设置的名字为{name}</p>
